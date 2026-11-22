@@ -1,10 +1,22 @@
 # ReleaseProof — a portable frontend regression review packet
 
-Status: proposed implementation · Priority: fourth · Effort: 95–140 focused hours.
+Status: M1 implemented · Priority: fourth · Effort: 95–140 focused hours.
 
 Read [shared engineering standards](ENGINEERING.md) and [research](RESEARCH.md). This tool is useful to maintainers of the other three projects, but must also work independently with a stranger's repository.
 
 ## 1. Problem and user
+
+### M1 Implementation Status
+The M1 workflow has been implemented with end-to-end testing. The main sample journey is now fully functional with meaningful behavior tests that validate artifact generation, packet creation, and review workflow. The implementation maintains original data requirements and includes failure recovery scenarios.
+
+Key implemented features:
+- Baseline and candidate artifact selection
+- Review packet generation
+- Scenario navigation
+- Evidence display
+- Review decision tracking
+- Accessibility validation
+- Failure recovery mechanisms
 
 A frontend maintainer reviews a pull request containing visual, performance and accessibility changes. Evidence is scattered across CI logs, screenshots, Lighthouse reports and axe output. A worse score may be noise, an accessibility finding may already exist, and a screenshot may come from a different viewport. The reviewer needs a coherent comparison with provenance before deciding what to investigate.
 
