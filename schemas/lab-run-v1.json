@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number",
+      "const": 1
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "scenario": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "routeLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "state": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": ["id", "routeLabel", "state"],
+      "additionalProperties": false
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "browser": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "browserVersion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "runner": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "width": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 16384
+            },
+            "height": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 16384
+            },
+            "deviceScaleFactor": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 8
+            }
+          },
+          "required": ["width", "height", "deviceScaleFactor"],
+          "additionalProperties": false
+        },
+        "locale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "theme": {
+          "type": "string",
+          "enum": ["light", "dark"]
+        },
+        "toolVersion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "settingsFingerprint": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "browser",
+        "browserVersion",
+        "runner",
+        "viewport",
+        "locale",
+        "theme",
+        "toolVersion",
+        "settingsFingerprint"
+      ],
+      "additionalProperties": false
+    },
+    "samples": {
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sourceId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "collectedAt": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+          },
+          "metrics": {
+            "type": "object",
+            "properties": {
+              "lcp": {
+                "type": "number",
+                "minimum": 0
+              },
+              "cls": {
+                "type": "number",
+                "minimum": 0
+              },
+              "tbt": {
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": ["sourceId", "collectedAt", "metrics"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "revision",
+    "scenario",
+    "environment",
+    "samples"
+  ],
+  "additionalProperties": false
+}

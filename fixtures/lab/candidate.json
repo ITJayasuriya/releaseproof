@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "revision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "scenario": {
+    "id": "checkout",
+    "routeLabel": "/checkout",
+    "state": "ready"
+  },
+  "environment": {
+    "browser": "Chromium",
+    "browserVersion": "synthetic-1",
+    "runner": "synthetic-linux",
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "deviceScaleFactor": 1
+    },
+    "locale": "en-GB",
+    "theme": "light",
+    "toolVersion": "13.6.0",
+    "settingsFingerprint": "synthetic-mobile-v1"
+  },
+  "samples": [
+    {
+      "sourceId": "sample-0",
+      "collectedAt": "2026-11-25T00:00:00Z",
+      "metrics": {
+        "lcp": 1200,
+        "cls": 0,
+        "tbt": 100
+      }
+    },
+    {
+      "sourceId": "sample-1",
+      "collectedAt": "2026-11-25T00:00:00Z",
+      "metrics": {
+        "lcp": 1300,
+        "cls": 0,
+        "tbt": 100
+      }
+    },
+    {
+      "sourceId": "sample-2",
+      "collectedAt": "2026-11-25T00:00:00Z",
+      "metrics": {
+        "lcp": 1400,
+        "cls": 0,
+        "tbt": 100
+      }
+    },
+    {
+      "sourceId": "sample-3",
+      "collectedAt": "2026-11-25T00:00:00Z",
+      "metrics": {
+        "lcp": 1300,
+        "cls": 0,
+        "tbt": 100
+      }
+    },
+    {
+      "sourceId": "sample-4",
+      "collectedAt": "2026-11-25T00:00:00Z",
+      "metrics": {
+        "lcp": 9000,
+        "cls": 0,
+        "tbt": 100
+      }
+    }
+  ]
+}
