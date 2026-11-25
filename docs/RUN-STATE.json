@@ -4,21 +4,28 @@
   "state": "in_progress",
   "planned_daily_goal": "M0 runtime-validated lab evidence contract and pure comparison policy with regression tests",
   "commit_target": 5,
-  "completed_unit_ids": ["lab-schema", "lab-comparison", "lighthouse-adapter"],
-  "actual_commit_shas": ["f50fe87", "b2621c1"],
+  "completed_unit_ids": [
+    "lab-schema",
+    "lab-comparison",
+    "lighthouse-adapter",
+    "lab-json-schema"
+  ],
+  "actual_commit_shas": ["f50fe87", "b2621c1", "8877681"],
   "branch": "build/lab-evidence-contract",
   "open_pr": null,
-  "last_tested_sha": null,
+  "last_tested_sha": "8877681",
   "actual_test_results": [
-    "check passed",
-    "38 domain tests passed",
+    "check passed (working tree based on 8877681)",
+    "40 domain tests passed",
     "build passed"
   ],
-  "next_action": "Commit tested Lighthouse adapter; export versioned lab JSON Schema with parity regression coverage",
+  "next_action": "Commit schema export, then document compatibility and run browser smoke before PR",
   "dirty_files": [
-    "src/evidence/lighthouse.ts",
-    "src/evidence/lighthouse.test.ts"
+    "schemas/lab-run-v1.json",
+    "scripts/export-lab-schema.mjs",
+    "src/evidence/json-schema.test.ts",
+    "package.json"
   ],
   "blocker": null,
-  "updated_at": "2026-11-25T11:45:45.403988+00:00"
+  "updated_at": "2026-11-25T11:46:45.704779+00:00"
 }

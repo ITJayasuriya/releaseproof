@@ -36,3 +36,8 @@ Adapter working tree: 38 domain tests, check and build passed; no UI changes.
 Thermo-Nuclear review simplified score modes into a closed schema enum rather
 than scattered fallback conditions. Installed Lighthouse metric implementations
 confirm milliseconds for LCP/TBT and unitless CLS. No real lab collection claimed.
+
+Versioned structural JSON Schema export added with regeneration and runtime parity
+tests. Runtime sample-ID uniqueness remains authoritative and is documented as a
+JSON Schema limitation. Tested working tree based on `8877681`: 40 domain tests,
+check and build passed. No new dependency or generic adapter registry added.
