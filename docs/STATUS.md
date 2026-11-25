@@ -22,3 +22,8 @@ or database are needed for the current milestone. Real maintainer observation
 
 Local Firefox has the documented startup failure; run Chromium/WebKit locally and
 all three engines in Linux CI. See RUN-STATE.json for exact run checkpoint.
+
+Comparison acceptance: raw samples, median/range, five-sample minimum, undefined
+zero-baseline percentage, explicit scenario/environment mismatch and missing
+metric states now have 24 passing domain tests. Schema parsing canonicalizes
+field order before environment matching. Deltas remain informational only.

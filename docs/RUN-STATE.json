@@ -4,14 +4,14 @@
   "state": "in_progress",
   "planned_daily_goal": "M0 runtime-validated lab evidence contract and pure comparison policy with regression tests",
   "commit_target": 5,
-  "completed_unit_ids": ["lab-schema"],
-  "actual_commit_shas": [],
+  "completed_unit_ids": ["lab-schema", "lab-comparison"],
+  "actual_commit_shas": ["f50fe87"],
   "branch": "build/lab-evidence-contract",
   "open_pr": null,
   "last_tested_sha": null,
-  "actual_test_results": ["check passed", "9 domain tests passed"],
-  "next_action": "Commit schema; implement pure comparison policy and tests",
+  "actual_test_results": ["check passed", "24 domain tests passed"],
+  "next_action": "Commit comparison; implement constrained Lighthouse 13.6.0 adapter",
   "dirty_files": [],
   "blocker": null,
-  "updated_at": "2026-11-25T02:14:21.797851+00:00"
+  "updated_at": "2026-11-25T02:30:55.423648+00:00"
 }
