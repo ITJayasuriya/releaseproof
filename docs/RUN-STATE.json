@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "local_date": "2026-11-25",
-  "state": "awaiting_ci",
+  "state": "completed_day",
   "planned_daily_goal": "M0 runtime-validated lab evidence contract and pure comparison policy with regression tests",
   "commit_target": 5,
   "completed_unit_ids": [
@@ -11,26 +11,21 @@
     "lab-json-schema",
     "compatibility-numeric-hardening"
   ],
-  "actual_commit_shas": ["f50fe87", "b2621c1", "8877681", "45386a8"],
-  "branch": "build/lab-evidence-contract",
+  "actual_commit_shas": ["f50fe87", "b2621c1", "8877681", "45386a8", "ff2a579"],
+  "branch": "main",
   "open_pr": null,
-  "last_tested_sha": "45386a8",
+  "last_tested_sha": "5582a2dd0ed3774816e08fd18d10a8192b1b9fc6",
   "actual_test_results": [
-    "check passed (working tree based on 45386a8)",
-    "42 domain tests passed",
-    "build passed",
-    "Chromium and WebKit setup/axe smoke: 2 passed; Firefox unrun locally"
+    "check, 42 domain tests and build passed locally and Linux CI",
+    "Local Chromium/WebKit setup+axe: 2 passed",
+    "Linux CI browser setup smoke: 3 passed",
+    "PR #13 quality green: run 45608039615",
+    "Refreshed PR #1 quality green: run 45623790958; merged ef815d4",
+    "Refreshed conflict-resolved PR #2 quality green: run 45624296377; merged 29fbc70",
+    "Live Chromium verification: unchanged development marker; no deployment"
   ],
-  "next_action": "Commit reviewed compatibility/numeric regression work; push branch, open PR, require quality CI before merge",
-  "dirty_files": [
-    "docs/COMPATIBILITY.md",
-    "fixtures/lighthouse/numeric.json",
-    "src/evidence/compare.ts",
-    "src/evidence/compare.test.ts",
-    "src/evidence/lighthouse.test.ts",
-    "docs/STATUS.md",
-    "docs/RUN-STATE.json"
-  ],
+  "next_action": "Nov 25 daily goal and PR maintenance complete. Tomorrow resume current main: bounded filesystem loader and raw-report hash/provenance manifest, safe/invalid input regression fixtures, then packet CLI and summary viewer. Hold PR #3 for unsupported TS7 peer dependencies and PR #12 for absent implementation. Owner authorizes necessary reviewed merges after required CI without asking.",
+  "dirty_files": [],
   "blocker": null,
-  "updated_at": "2026-11-25T11:48:34.972531+00:00"
+  "updated_at": "2026-11-25T13:32:35.944368+00:00"
 }
