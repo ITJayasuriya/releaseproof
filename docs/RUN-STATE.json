@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "local_date": "2026-11-25",
+  "state": "in_progress",
+  "planned_daily_goal": "M0 runtime-validated lab evidence contract and pure comparison policy with regression tests",
+  "commit_target": 5,
+  "completed_unit_ids": ["lab-schema"],
+  "actual_commit_shas": [],
+  "branch": "build/lab-evidence-contract",
+  "open_pr": null,
+  "last_tested_sha": null,
+  "actual_test_results": ["check passed", "9 domain tests passed"],
+  "next_action": "Commit schema; implement pure comparison policy and tests",
+  "dirty_files": [],
+  "blocker": null,
+  "updated_at": "2026-11-25T02:14:21.797851+00:00"
+}
