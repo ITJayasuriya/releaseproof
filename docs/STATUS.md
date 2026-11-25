@@ -27,3 +27,12 @@ Comparison acceptance: raw samples, median/range, five-sample minimum, undefined
 zero-baseline percentage, explicit scenario/environment mismatch and missing
 metric states now have 24 passing domain tests. Schema parsing canonicalizes
 field order before environment matching. Deltas remain informational only.
+
+Recovery continuation: verified original build chat idle and reclaimed its stale
+shared-server PID lock. Retained target 5 and reconciled comparison commit
+`b2621c1`. Lighthouse 13.6.0 adapter now preserves unavailable audit reasons,
+rejects untested versions/units/runtime failures, and bounds JSON to 20 MiB.
+Adapter working tree: 38 domain tests, check and build passed; no UI changes.
+Thermo-Nuclear review simplified score modes into a closed schema enum rather
+than scattered fallback conditions. Installed Lighthouse metric implementations
+confirm milliseconds for LCP/TBT and unitless CLS. No real lab collection claimed.
