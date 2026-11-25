@@ -8,7 +8,7 @@ function summarize(values: number[]) {
   const median =
     sorted.length % 2
       ? sorted[middle]!
-      : (sorted[middle - 1]! + sorted[middle]!) / 2;
+      : sorted[middle - 1]! + (sorted[middle]! - sorted[middle - 1]!) / 2;
   return {
     samples: values,
     median,
@@ -83,10 +83,18 @@ export function compareMetric(
     } as const;
   }
   const delta = right.median - left.median;
+  const percent = left.median === 0 ? null : (delta / left.median) * 100;
+  if (percent !== null && !Number.isFinite(percent)) {
+    return {
+      ...evidence,
+      status: "incomplete",
+      reason: "numeric_range",
+    } as const;
+  }
   return {
     ...evidence,
     status: "informational",
     delta,
-    percent: left.median === 0 ? null : (delta / left.median) * 100,
+    percent,
   } as const;
 }

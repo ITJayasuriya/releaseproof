@@ -1,27 +1,13 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { readLighthouse } from "./lighthouse";
 
-const report = {
-  lighthouseVersion: "13.6.0",
-  fetchTime: "2026-11-25T00:00:00Z",
-  audits: {
-    "total-blocking-time": {
-      numericValue: 0,
-      numericUnit: "millisecond",
-      scoreDisplayMode: "numeric",
-    },
-    "largest-contentful-paint": {
-      numericValue: 1250,
-      numericUnit: "millisecond",
-      scoreDisplayMode: "numeric",
-    },
-    "cumulative-layout-shift": {
-      numericValue: 0.1,
-      numericUnit: "unitless",
-      scoreDisplayMode: "numeric",
-    },
-  },
-};
+const report = JSON.parse(
+  readFileSync(
+    new URL("../../fixtures/lighthouse/numeric.json", import.meta.url),
+    "utf8",
+  ),
+);
 
 describe("Lighthouse lab adapter", () => {
   it("extracts numeric lab values without substituting an INP value", () => {

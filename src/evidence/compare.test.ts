@@ -79,6 +79,34 @@ describe("lab comparisons", () => {
     run.environment.viewport.width = 800;
     expect(compareMetric(baseline, run, "lcp").status).toBe("not_comparable");
   });
+  it("keeps even medians finite near the numeric limit", () => {
+    const run = structuredClone(baseline);
+    run.samples.forEach((sample) => {
+      sample.metrics.lcp = Number.MAX_VALUE;
+    });
+    run.samples.push({ ...run.samples[0]!, sourceId: "six" });
+    expect(compareMetric(run, run, "lcp")).toMatchObject({
+      status: "informational",
+      delta: 0,
+      baseline: { median: Number.MAX_VALUE },
+    });
+  });
+  it("withholds a percentage outside the numeric range", () => {
+    const left = structuredClone(baseline);
+    const right = structuredClone(candidate);
+    left.samples.forEach((sample) => {
+      sample.metrics.lcp = Number.MIN_VALUE;
+    });
+    right.samples.forEach((sample) => {
+      sample.metrics.lcp = Number.MAX_VALUE;
+    });
+    const result = compareMetric(left, right, "lcp");
+    expect(result).toMatchObject({
+      status: "incomplete",
+      reason: "numeric_range",
+    });
+    expect(result).not.toHaveProperty("delta");
+  });
   it("does not pair renamed scenarios", () => {
     expect(
       compareMetric(
