@@ -1,5 +1,5 @@
-import { labRunSchema, metricKeySchema, metricUnits } from "./schema";
-import type { MetricKey } from "./schema";
+import { labRunSchema, metricKeySchema, metricUnits } from "./schema.ts";
+import type { MetricKey } from "./schema.ts";
 
 function summarize(values: number[]) {
   if (values.length === 0) return null;

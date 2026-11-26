@@ -95,3 +95,41 @@ Before writing tomorrow: read RUN-STATE and check the writer lock, use current
 main, keep the existing lockfile and run the required checks. Final handoff is
 committed through a separate documentation PR so the local checkout can be clean. There is no need to
 create another schedule or change the deadline.
+
+## 26 November — collection implementation in progress
+
+Daily target selected once: three coherent commits. Bounded declared-file reader
+implemented with 20 MiB JSON/100 MiB collection limits, strict UTF-8, nesting cap,
+regular-file enforcement and rejection of traversal and symlink inputs. Nine
+boundary tests passed, including cumulative resource limits. No UI/deployment
+changed. Next: manifest/hash binding and atomic packet output. Alpha remains open.
+
+Collection contract now binds report byte hashes to a strict versioned revision,
+scenario and environment declaration. Duplicate IDs, paths and hashes are rejected
+rather than counted as additional samples. Report tool-version disagreement,
+malformed/unsupported reports and altered bytes fail explicitly; unavailable
+metric reasons survive normalization. All 61 domain tests and check passed.
+Hashes verify bytes, not independent measurements or truth of caller metadata.
+
+Development lab packet CLI now works from Node 24 (`npm run cli -- build ...`):
+normalized schema-versioned packet, raw report/manifest assets under SHA-256 names,
+deterministic ID, explicit unsupported axe/screenshots, staged directory output,
+cooperating builder lock and no overwrite of existing output. Two five-sample
+synthetic fixture collections exercise the real CLI. See [COLLECTIONS.md](COLLECTIONS.md)
+for contract, exact command, recovery and stable-directory limitations.
+
+Ponytail/Thermo-Nuclear branch review kept filesystem reads, collection validation,
+packet writing and CLI errors in focused modules with no adapter registry or new
+dependency. Fixed parse errors that could echo raw JSON contents; subprocess
+regression proves secret-like malformed input is not echoed. Hash duplication is
+rejected rather than counted as independent sampling. No independent reviewer or
+real performance measurements claimed.
+
+Check, 67 domain/integration tests and build pass on this branch. Local
+Chromium/WebKit setup+axe: 2 passed after retry with permission to bind the test
+port (initial sandbox EPERM was not a product failure). Local Firefox unrun.
+Required Linux CI and PR integration are next. PRs #3/#12 heads remain unchanged
+and retain their prior blockers. Issues #4–#9 remain open; this is partial M1 work.
+Next: static summary/raw sample viewer and strict packet import/hash verification,
+then axe and screenshot workflows. Full remaining v1 scope above still applies.
+No npm publication or deployment; public setup page has not been replaced.
