@@ -4,13 +4,13 @@
   "state": "in_progress",
   "planned_daily_goal": "Bounded local collection loader with report hash and provenance binding; atomic normalized packet output",
   "commit_target": 3,
-  "completed_unit_ids": ["bounded-local-reader"],
-  "actual_commit_shas": [],
+  "completed_unit_ids": ["bounded-local-reader", "collection-binding"],
+  "actual_commit_shas": ["67775bf"],
   "branch": "build/collection-packets",
   "open_pr": null,
   "last_tested_sha": "5582a2dd0ed3774816e08fd18d10a8192b1b9fc6",
-  "actual_test_results": ["9 local file boundary tests passed"],
-  "next_action": "Commit tested declared-file reader; implement collection manifest hash/provenance binding",
+  "actual_test_results": ["npm run check passed", "61 domain tests passed"],
+  "next_action": "Commit collection binding; implement development packet CLI, no-overwrite staged output and real process integration tests",
   "dirty_files": [
     "src/evidence/local-files.ts",
     "src/evidence/local-files.test.ts",
@@ -18,5 +18,5 @@
     "docs/RUN-STATE.json"
   ],
   "blocker": null,
-  "updated_at": "2026-11-26T16:33:07.737252+00:00"
+  "updated_at": "2026-11-26T16:34:27.763017+00:00"
 }

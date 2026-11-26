@@ -103,3 +103,10 @@ implemented with 20 MiB JSON/100 MiB collection limits, strict UTF-8, nesting ca
 regular-file enforcement and rejection of traversal and symlink inputs. Nine
 boundary tests passed, including cumulative resource limits. No UI/deployment
 changed. Next: manifest/hash binding and atomic packet output. Alpha remains open.
+
+Collection contract now binds report byte hashes to a strict versioned revision,
+scenario and environment declaration. Duplicate IDs, paths and hashes are rejected
+rather than counted as additional samples. Report tool-version disagreement,
+malformed/unsupported reports and altered bytes fail explicitly; unavailable
+metric reasons survive normalization. All 61 domain tests and check passed.
+Hashes verify bytes, not independent measurements or truth of caller metadata.
