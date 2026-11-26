@@ -1,0 +1,21 @@
+{
+  "lighthouseVersion": "13.6.0",
+  "fetchTime": "2026-11-26T00:00:00Z",
+  "audits": {
+    "total-blocking-time": {
+      "numericValue": 0,
+      "numericUnit": "millisecond",
+      "scoreDisplayMode": "numeric"
+    },
+    "largest-contentful-paint": {
+      "numericValue": 1500,
+      "numericUnit": "millisecond",
+      "scoreDisplayMode": "numeric"
+    },
+    "cumulative-layout-shift": {
+      "numericValue": 0.1,
+      "numericUnit": "unitless",
+      "scoreDisplayMode": "numeric"
+    }
+  }
+}

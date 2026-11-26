@@ -75,6 +75,7 @@ export async function loadCollection(directory: string) {
     samples,
   });
   return {
+    collectionBytes: manifest.bytes,
     run,
     reports,
     collectionSha256: createHash("sha256").update(manifest.bytes).digest("hex"),

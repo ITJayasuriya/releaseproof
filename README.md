@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/ITJayasuriya/releaseproof/actions/workflows/ci.yml/badge.svg)](https://github.com/ITJayasuriya/releaseproof/actions/workflows/ci.yml)
 
-Open-source project in development. This repository currently contains the verified development foundation, not a completed product.
+Open-source project in development. The development CLI builds hash-bound Lighthouse lab packets; the review viewer and remaining v1 workflows are unfinished. See [the collection contract and runnable synthetic example](docs/COLLECTIONS.md).
 
 ## Local development
 

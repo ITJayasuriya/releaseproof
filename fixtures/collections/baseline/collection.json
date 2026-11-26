@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "scenario": {
+    "id": "home",
+    "routeLabel": "/",
+    "state": "synthetic-ready"
+  },
+  "environment": {
+    "browser": "Chromium",
+    "browserVersion": "synthetic-not-measured",
+    "runner": "synthetic-fixture",
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "deviceScaleFactor": 1
+    },
+    "locale": "en",
+    "theme": "light",
+    "toolVersion": "13.6.0",
+    "settingsFingerprint": "synthetic-v1"
+  },
+  "reports": [
+    {
+      "sourceId": "synthetic-1",
+      "path": "sample-1.json",
+      "sha256": "21b6b7fc685ad5c53cf8a2afa7956a4c11a4e476538f874ddd5657844094bad9"
+    },
+    {
+      "sourceId": "synthetic-2",
+      "path": "sample-2.json",
+      "sha256": "36cd445c76e6b2f555d15c8c577f618ea02982b4a244fe0b50dbb5b0ac202b42"
+    },
+    {
+      "sourceId": "synthetic-3",
+      "path": "sample-3.json",
+      "sha256": "bcf46d4eca9e6d11326955d9ef30fce0866a1d798155a99090edebc44466e7e8"
+    },
+    {
+      "sourceId": "synthetic-4",
+      "path": "sample-4.json",
+      "sha256": "26d90502db0de89fac16d94c17b0ec791b9311f03dc6451d4bd3bd068ee05983"
+    },
+    {
+      "sourceId": "synthetic-5",
+      "path": "sample-5.json",
+      "sha256": "9f39878dfffbb405607c3e9e5103fde19c15b8583d857d9c8b4fa54a8504f6b5"
+    }
+  ]
+}
