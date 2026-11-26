@@ -95,3 +95,11 @@ Before writing tomorrow: read RUN-STATE and check the writer lock, use current
 main, keep the existing lockfile and run the required checks. Final handoff is
 committed through a separate documentation PR so the local checkout can be clean. There is no need to
 create another schedule or change the deadline.
+
+## 26 November — collection implementation in progress
+
+Daily target selected once: three coherent commits. Bounded declared-file reader
+implemented with 20 MiB JSON/100 MiB collection limits, strict UTF-8, nesting cap,
+regular-file enforcement and rejection of traversal and symlink inputs. Nine
+boundary tests passed, including cumulative resource limits. No UI/deployment
+changed. Next: manifest/hash binding and atomic packet output. Alpha remains open.
